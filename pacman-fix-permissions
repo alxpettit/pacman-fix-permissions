@@ -28,8 +28,8 @@ if hasattr(args, 'filesystem-paths') and getattr(args, 'f') == []:
 
 def getTar(pkg):
     def _open():
-        p_arch = '/var/cache/pacman/pkg/{}-{}-{}.pkg.tar.xz'.format(pkg[0], pkg[1], arch)
-        p_any = '/var/cache/pacman/pkg/{}-{}-{}.pkg.tar.xz'.format(pkg[0], pkg[1], 'any')
+        p_arch = '/var/cache/pacman/pkg/{}-{}-{}.pkg.tar.zst'.format(pkg[0], pkg[1], arch)
+        p_any = '/var/cache/pacman/pkg/{}-{}-{}.pkg.tar.zst'.format(pkg[0], pkg[1], 'any')
         if isfile(p_arch):
             return tarfile.open(p_arch)
         if isfile(p_any):
